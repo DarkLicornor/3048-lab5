@@ -28,10 +28,10 @@ password='" . $password . "'";
  if (checklogin($username, $password, $db)) {
   session_start();
   $_SESSION['username'] = $username;
-  echo "Success ! Redirecting to home";
+  echo "<script>alert('Success ! Redirecting to home')</script>";
   header("location:./");
  } else {
-  echo "Username or password incorrect, please try again or sign in";
+  echo "<script>alert('Username or password incorrect, please try again or sign in')</script>";
   header("location:login");
  }
 } else {
