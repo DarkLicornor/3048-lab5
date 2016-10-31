@@ -25,6 +25,7 @@
   echo "<li><a href='login'>Login</a></li>";
   echo "<li><a href='signin'>Sign in</a></li>";
  }
+
  ?>
  </ul>
  </nav>

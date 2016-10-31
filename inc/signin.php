@@ -24,8 +24,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $sql = "INSERT INTO users (username, password) VALUES ('". $username ."', '" .$password."')";
 
     if (mysqli_query($db, $sql)) {
+        echo "Success ! Redirecting to login...";
         header("location:login");
     } else {
+        echo "Can't sign you in?";
         echo "Error: " . $sql . "<br>Error Message:" . mysqli_error($db);
     }
 }
