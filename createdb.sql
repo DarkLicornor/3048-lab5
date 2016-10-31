@@ -1,19 +1,18 @@
-IF OBJECT_ID('blogArticles', 'U') IS NOT NULL
-	DROP TABLE blogArticles
-GO
+DROP TABLE IF EXISTS `blogArticles`;
 
-CREATE TABLE blogArticles (
- articleID NVARCHAR(100) NOT NULL,
- articleName TEXT,
- articleText TEXT,
- articleAuthor NVARCHAR(100)
- CONSTRAINT pk_Articles PRIMARY KEY (articleID) );
+CREATE TABLE `blogArticles` (
+ `articleID` NVARCHAR(100) NOT NULL,
+ `articleName` TEXT,
+ `articleText` TEXT,
+ `articleAuthor` NVARCHAR(100)
+  PRIMARY KEY (`articleID`)ENGINE=MyISAM DEFAULT CHARSET=latin1);
 
-IF OBJECT_ID('users', 'U') IS NOT NULL
-	DROP TABLE users
-GO
+DROP TABLE IF EXISTS `users`;
 
-CREATE TABLE users(
-  username NVARCHAR(100) NOT NULL,
-  password TEXT NOT NULL,
- CONSTRAINT pk_Users PRIMARY KEY (username) );
+CREATE TABLE `users`(
+  `username` NVARCHAR(100) NOT NULL,
+  `password` TEXT NOT NULL,
+  PRIMARY KEY (`username`) ENGINE=MyISAM DEFAULT CHARSET=latin1);
+
+INSERT INTO `users` (`username`, `password`) VALUES
+('admin', 'admin');
