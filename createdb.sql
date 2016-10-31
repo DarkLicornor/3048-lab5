@@ -4,7 +4,7 @@ CREATE TABLE `blogArticles` (
  `articleID` NVARCHAR(100) NOT NULL,
  `articleName` TEXT,
  `articleText` TEXT,
- `articleAuthor` NVARCHAR(100)
+ `articleAuthor` NVARCHAR(100),
   PRIMARY KEY (`articleID`)ENGINE=MyISAM DEFAULT CHARSET=latin1);
 
 DROP TABLE IF EXISTS `users`;
