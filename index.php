@@ -1,5 +1,6 @@
 <?
 
+include 'style/style.css';
 define('INCLUDE_DIR', dirname(__FILE__) . '/inc/');
 
 $rules = array(
@@ -11,8 +12,10 @@ $rules = array(
    'blog' => "/blog",
    'blog_article' => "/blog/(?'blogID'[\w\-]+)",
    //
-   //Admin Pages
+   //Admin & user Pages
    //
+
+    'signin' => "/signin",
    'login' => "/login",
    'create_article' => "/createarticle",
    'logout' => "/logout",
