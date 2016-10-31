@@ -1,6 +1,6 @@
 <?
 
-include 'style/style.css';
+echo "<link rel='stylesheet' href='style/style.css' type='text/css'>";
 define('INCLUDE_DIR', dirname(__FILE__) . '/inc/');
 
 $rules = array(

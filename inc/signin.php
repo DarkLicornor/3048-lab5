@@ -29,8 +29,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         echo "Error: " . $sql . "<br>Error Message:" . mysqli_error($db);
     }
 }
-//test
-} else {
-    header("location:login");
-}
 ?>
