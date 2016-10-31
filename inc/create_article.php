@@ -25,8 +25,9 @@ if (isset($_SESSION['username'])) //SESSION DOES EXIST
   $sql = "INSERT INTO blogArticles (articleID, articleName, articleText,
 articleAuthor) VALUES ('". $articleID ."', '" .$articleName."', '".$articleText."',
 '".$articleAuthor."')";
+
   if (mysqli_query($db, $sql)) {
-   header("blog");
+   header("location:blog");
   } else {
    echo "Error: " . $sql . "<br>Error Message:" . mysqli_error($db);
   }
